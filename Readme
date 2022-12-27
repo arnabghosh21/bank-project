@@ -1,0 +1,5 @@
+o Format Transaction data – ( Data from sl no 1 )
+o Drop 9th empty column
+o Move WITHDRAWAL AMT and DEPOSIT AMT data to a new Column TransactionAmount ( Default value is Zero )
+o Create a New Column TransactionType having value DR/CR if WITHDRAWAL AMT value filled will be DR and if DEPOSIT AMT filled will be CR
+o Write final output file in CSV format ( Single file ) having columns ---  Account No, DATE, TRANSACTION DETAILS, CHQ.NO., VALUE DATE, WITHDRAWAL AMT, DEPOSIT AMT, TransactionType, TransactionAmount, BALANCE AMT
