@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "bank-project"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"ls_1_connectionString": {
+			"value": ""
+		},
+		"ls_2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://bankdatastorageaccount.dfs.core.windows.net/"
+		},
+		"ls_2_properties_typeProperties_url": {
+			"value": "https://storage0adls1.dfs.core.windows.net/"
+		}
+	}
+}
