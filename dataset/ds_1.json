@@ -1,0 +1,60 @@
+{
+	"name": "ds_1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sampleBank.csv",
+				"container": "bank-data-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Account No",
+				"type": "String"
+			},
+			{
+				"name": "DATE",
+				"type": "String"
+			},
+			{
+				"name": "TRANSACTION DETAILS",
+				"type": "String"
+			},
+			{
+				"name": "CHQ.NO.",
+				"type": "String"
+			},
+			{
+				"name": "VALUE DATE",
+				"type": "String"
+			},
+			{
+				"name": " WITHDRAWAL AMT ",
+				"type": "String"
+			},
+			{
+				"name": " DEPOSIT AMT ",
+				"type": "String"
+			},
+			{
+				"name": "BALANCE AMT",
+				"type": "String"
+			},
+			{
+				"name": ".",
+				"type": "String"
+			}
+		]
+	}
+}

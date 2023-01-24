@@ -1,0 +1,39 @@
+{
+	"name": "getMetadataDs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "container-one"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "candidateName",
+				"type": "String"
+			},
+			{
+				"name": "address",
+				"type": "String"
+			},
+			{
+				"name": "mobileNo",
+				"type": "String"
+			},
+			{
+				"name": "yearOfPassing",
+				"type": "String"
+			}
+		]
+	}
+}
