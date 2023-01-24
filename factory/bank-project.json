@@ -1,0 +1,9 @@
+{
+	"name": "bank-project",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "69caa2da-ca10-4193-a0ae-d89cad89113d",
+		"tenantId": "0b209ac8-85f0-45ea-9763-040d5ea84f60"
+	}
+}
