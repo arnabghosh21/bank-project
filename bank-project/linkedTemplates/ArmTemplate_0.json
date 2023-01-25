@@ -544,7 +544,8 @@
 								"referenceName": "lookup_ds_in",
 								"type": "DatasetReference",
 								"parameters": {}
-							}
+							},
+							"firstRowOnly": false
 						}
 					},
 					{
