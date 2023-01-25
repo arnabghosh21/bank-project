@@ -31,8 +31,37 @@
 						"type": "DatasetReference"
 					}
 				}
+			},
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup1').output.value",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@contains(item().empName, pipeline().parameters.para1)",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"parameters": {
+			"para1": {
+				"type": "string",
+				"defaultValue": "A"
+			}
+		},
 		"annotations": []
 	}
 }
