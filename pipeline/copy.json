@@ -1,0 +1,50 @@
+{
+	"name": "copy",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var1",
+					"value": "aa"
+				}
+			},
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "lookup",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"para1": {
+							"value": "@variables('var1')",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"variables": {
+			"var1": {
+				"type": "String",
+				"defaultValue": "A"
+			}
+		},
+		"annotations": []
+	}
+}

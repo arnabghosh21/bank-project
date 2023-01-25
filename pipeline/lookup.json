@@ -38,7 +38,7 @@
 				"type": "Filter",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "Set variable1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -47,11 +47,31 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output.value",
+						"value": "@variables('var1')",
 						"type": "Expression"
 					},
 					"condition": {
 						"value": "@contains(item().empName, pipeline().parameters.para1)",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var1",
+					"value": {
+						"value": "@activity('Lookup1').output.value",
 						"type": "Expression"
 					}
 				}
@@ -65,8 +85,7 @@
 		},
 		"variables": {
 			"var1": {
-				"type": "String",
-				"defaultValue": "A"
+				"type": "String"
 			}
 		},
 		"annotations": []
