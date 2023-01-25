@@ -1,0 +1,27 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "lookup",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"para1": "D"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2023-01-25T04:47:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
