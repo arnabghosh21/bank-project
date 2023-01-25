@@ -20,6 +20,9 @@
 		"ls_2_properties_typeProperties_url": {
 			"value": "https://storage0adls1.dfs.core.windows.net/"
 		},
+		"trigger1_properties_lookup_parameters_para1": {
+			"value": "D"
+		},
 		"containerUri": {
 			"value": ""
 		},
